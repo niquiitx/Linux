@@ -39,13 +39,25 @@ def obtener_registros():
 def obtener_peritajes():
     return jsonify(peritajes)
 
+# NUEVA RUTA INVENTARIO
+@app.route('/api/inventario', methods=['GET'])
+def inventario():
+    return jsonify({
+        "mensaje": "Inventario en desarrollo",
+        "repuestos": [
+            "Aceite",
+            "Bujias",
+            "Filtros"
+        ]
+    })
+
 # Ruta POST peritajes
 @app.route('/api/peritajes', methods=['POST'])
 def registrar_peritaje():
     data = request.json
 
     nueva_moto = {
-        "placa": data["placa"]
+        "placa": data["placa"].upper()
     }
 
     peritajes.append(nueva_moto)
