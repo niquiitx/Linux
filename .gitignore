@@ -1,2 +1,16 @@
-echo .env
-.env
+# Ignorar entornos virtuales
+venv/
+ENV/
+
+# Caché Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Bases de datos SQLite
+*.sqlite3
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
