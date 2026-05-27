@@ -51,6 +51,24 @@ def inventario():
         ]
     })
 
+# NUEVA RUTA FACTURAS
+@app.route('/api/facturas', methods=['GET'])
+def obtener_facturas():
+    return jsonify({
+        "facturas": [
+            {
+                "cliente": "Carlos Ruiz",
+                "moto": "Yamaha FZ",
+                "valor": 350000
+            },
+            {
+                "cliente": "Laura Gomez",
+                "moto": "Honda CB190R",
+                "valor": 420000
+            }
+        ]
+    })
+
 # Ruta POST peritajes
 @app.route('/api/peritajes', methods=['POST'])
 def registrar_peritaje():
